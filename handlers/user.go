@@ -15,7 +15,7 @@ import (
 func CreateUser(w http.ResponseWriter, r *http.Request) {
     client, err : config.ConnectToMongoDB()
     if err != nil {
-        http.Error(w, err.Error(), http.StatusInterna;ServerError)
+        http.Error(w, err.Error(), http.StatusInternalServerError)
 	return
     }
 
